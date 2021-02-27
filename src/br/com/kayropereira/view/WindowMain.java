@@ -1,5 +1,10 @@
 package br.com.kayropereira.view;
 
+
+import java.awt.Image;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JFrame;
@@ -29,6 +34,13 @@ public class WindowMain extends JFrame{
 			UIManager.setLookAndFeel(looks[3].getClassName());
 		} catch (Exception e) {
 		    e.printStackTrace();
+		}
+		
+		
+		try {
+			setIconImage(ImageIO.read(getClass().getClassLoader().getResource("br\\com\\kayropereira\\images\\icon.jpg")));
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		
 		setTitle("Detectar Face");
