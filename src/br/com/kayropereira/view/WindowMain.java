@@ -1,7 +1,6 @@
 package br.com.kayropereira.view;
 
 
-import java.awt.Image;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -38,7 +37,9 @@ public class WindowMain extends JFrame{
 		
 		
 		try {
-			setIconImage(ImageIO.read(getClass().getClassLoader().getResource("br\\com\\kayropereira\\images\\icon.jpg")));
+//			setIconImage(ImageIO.read(getClass().getClassLoader().getResource("br\\com\\kayropereira\\images\\icon.jpg")));
+//			setIconImage(ImageIO.read(getClass().getResource("br\\com\\kayropereira\\images\\icon.jpg")));
+			setIconImage(ImageIO.read(getClass().getResource("/br/com/kayropereira/images/icon.jpg")));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

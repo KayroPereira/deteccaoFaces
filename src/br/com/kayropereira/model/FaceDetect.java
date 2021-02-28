@@ -19,9 +19,7 @@ public class FaceDetect{
 
 		Imgproc.cvtColor(imageColor, imageGray, Imgproc.COLOR_BGR2GRAY);
 
-		CascadeClassifier classifier = new CascadeClassifier(
-				"src\\br\\com\\kayropereira\\model\\cascades\\haarcascade_frontalface_default.xml");
-//		CascadeClassifier classifier = new CascadeClassifier("src\\br\\com\\kayropereira\\model\\cascades\\haarcascade_eye.xml");
+		CascadeClassifier classifier = new CascadeClassifier("cascades/haarcascade_frontalface_default.xml");
 
 		MatOfRect facesDetected = new MatOfRect();
 

@@ -57,6 +57,7 @@ public class WebCamController implements ScrollBarObserver {
 
 					postObserver(Utilitario.convertMatToImage(faceDetect.detectFace(video, getScaleFactor(),
 							getMinNeighbors(), getMinSize(), getMaxSize())));
+//					postObserver(Utilitario.convertMatToImage(video));
 				}
 			}
 		}
