@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.opencv.core.Mat;
 import org.opencv.videoio.VideoCapture;
+import org.opencv.videoio.Videoio;
 
 import br.com.kayropereira.model.FaceDetect;
 import br.com.kayropereira.model.ScrollBarObserver;
@@ -46,12 +47,13 @@ public class WebCamController implements ScrollBarObserver {
 
 	private void showVideo() {
 		Mat video = new Mat();
-
-		VideoCapture capture = new VideoCapture(0);
+		
+		VideoCapture capture = new VideoCapture(0, Videoio.CAP_DSHOW);
 
 		if (capture.isOpened()) {
 			while (true) {
 				capture.read(video);
+				
 
 				if (!video.empty()) {
 
